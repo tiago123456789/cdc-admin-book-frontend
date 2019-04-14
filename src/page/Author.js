@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import AuthorService from "../services/Author";
 import FormAuthor from "../components/author/FormAuthor";
 import ListAuthor from "../components/author/ListAuthor";
+import Container from "../components/template/Container";
 
 export default class Author extends Component {
 
@@ -25,10 +26,10 @@ export default class Author extends Component {
 
     render() {
         return (
-            <div>
+            <Container titlePage="Register Author">
                 <FormAuthor updateListAuthors={this.findAllAuthors}/>
                 <ListAuthor authors={this.state.authors} />
-            </div>
+            </Container>
         );
     }
 }

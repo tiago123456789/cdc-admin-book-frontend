@@ -7,5 +7,9 @@ export default (props) => (
             id={props.id} type={props.type} name={props.name}
             value={props.value} onChange={props.onChange} 
         />
+        { props.error &&
+            <span className="text-danger">{props.error[props.name]}</span>
+        }
+        
     </div>
 );
